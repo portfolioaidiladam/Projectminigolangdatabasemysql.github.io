@@ -12,7 +12,7 @@ import (
 func GetConnection() *sql.DB {
 	// Membuat koneksi ke database MySQL
 	// Format DSN: username:password@protocol(host:port)/dbname?param=value
-	db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/belajar_golang_database?parseTime=true")
+	db, err := sql.Open("mysql", "root:admin@tcp(localhost:3306)/belajar_golang_database?parseTime=true")
 	if err != nil {
 		panic(err) // Menghentikan program jika terjadi error saat koneksi
 	}
