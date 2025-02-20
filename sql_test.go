@@ -197,7 +197,7 @@ func TestAutoIncrement(t *testing.T) {
 
 	ctx := context.Background()
 
-	email := "eko@gmail.com"
+	email := "aidiladam@gmail.com"
 	comment := "Test komen"
 
 	script := "INSERT INTO comments(email, comment) VALUES(?, ?)"
@@ -228,7 +228,7 @@ func TestPrepareStatement(t *testing.T) {
 	defer statement.Close()
 
 	for i := 0; i < 10; i++ {
-		email := "eko" + strconv.Itoa(i) + "@gmail.com"
+		email := "Aidil" + strconv.Itoa(i) + "@gmail.com"
 		comment := "Komentar ke " + strconv.Itoa(i)
 
 		result, err := statement.ExecContext(ctx, email, comment)
@@ -260,7 +260,7 @@ func TestTransaction(t *testing.T) {
 	script := "INSERT INTO comments(email, comment) VALUES(?, ?)"
 	// do transaction
 	for i := 0; i < 10; i++ {
-		email := "eko" + strconv.Itoa(i) + "@gmail.com"
+		email := "aidil" + strconv.Itoa(i) + "@gmail.com"
 		comment := "Komentar ke " + strconv.Itoa(i)
 
 		result, err := tx.ExecContext(ctx, script, email, comment)
